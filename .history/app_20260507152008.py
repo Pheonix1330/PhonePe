@@ -302,7 +302,7 @@ if "year" in df.columns:
 
 # DATAFRAME
 
-st.subheader(" Dataset Preview")
+st.subheader("📂 Dataset Preview")
 
 st.dataframe(df)
 

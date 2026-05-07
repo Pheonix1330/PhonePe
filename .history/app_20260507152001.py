@@ -259,7 +259,7 @@ except Exception as e:
 
 if "year" in df.columns:
 
-    st.subheader(" Yearly Trend")
+    st.subheader("📈 Yearly Trend")
 
     fig2, ax2 = plt.subplots(figsize=(10,5))
 
@@ -302,7 +302,7 @@ if "year" in df.columns:
 
 # DATAFRAME
 
-st.subheader(" Dataset Preview")
+st.subheader("📂 Dataset Preview")
 
 st.dataframe(df)
 

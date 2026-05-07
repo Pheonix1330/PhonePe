@@ -107,7 +107,7 @@ if "transaction_type" in df.columns:
 
 # KPI SECTION
 
-st.subheader(" Key Performance Indicators")
+st.subheader("📌 Key Performance Indicators")
 
 col1, col2, col3 = st.columns(3)
 
@@ -141,7 +141,7 @@ if "insurance_amount" in df.columns:
 
 # TOP 10 CHART
 
-st.subheader(" Top 10 Analysis")
+st.subheader("📊 Top 10 Analysis")
 
 fig, ax = plt.subplots(figsize=(10,5))
 
@@ -259,7 +259,7 @@ except Exception as e:
 
 if "year" in df.columns:
 
-    st.subheader(" Yearly Trend")
+    st.subheader("📈 Yearly Trend")
 
     fig2, ax2 = plt.subplots(figsize=(10,5))
 
@@ -302,7 +302,7 @@ if "year" in df.columns:
 
 # DATAFRAME
 
-st.subheader(" Dataset Preview")
+st.subheader("📂 Dataset Preview")
 
 st.dataframe(df)
 
