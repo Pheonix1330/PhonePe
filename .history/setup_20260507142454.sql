@@ -2,9 +2,11 @@ CREATE DATABASE IF NOT EXISTS phonepe;
 
 USE phonepe;
 
+-- =========================================================
 -- AGGREGATED TABLES
+-- =========================================================
 
-CREATE TABLE IF NOT EXISTS aggregated_transaction (
+CREATE TABLE aggregated_transaction (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -13,11 +15,7 @@ CREATE TABLE IF NOT EXISTS aggregated_transaction (
     transaction_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM aggregated_transaction;
-
-SELECT * FROM aggregated_transaction LIMIT 10;
-
-CREATE TABLE IF NOT EXISTS aggregated_user (
+CREATE TABLE aggregated_user (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -26,11 +24,7 @@ CREATE TABLE IF NOT EXISTS aggregated_user (
     app_opens DOUBLE
 );
 
-SELECT COUNT(*) FROM aggregated_user;
-
-SELECT * FROM aggregated_user LIMIT 10;
-
-CREATE TABLE IF NOT EXISTS aggregated_insurance (
+CREATE TABLE aggregated_insurance (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -39,13 +33,11 @@ CREATE TABLE IF NOT EXISTS aggregated_insurance (
     insurance_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM aggregated_insurance;
-
-SELECT * FROM aggregated_insurance LIMIT 10;
-
+-- =========================================================
 -- MAP TABLES
+-- =========================================================
 
-CREATE TABLE IF NOT EXISTS map_user (
+CREATE TABLE map_user (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -54,11 +46,7 @@ CREATE TABLE IF NOT EXISTS map_user (
     app_opens BIGINT
 );
 
-SELECT COUNT(*) FROM map_user;
-
-SELECT * FROM map_user LIMIT 10;
-
-CREATE TABLE IF NOT EXISTS map_transaction (
+CREATE TABLE map_map (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -67,11 +55,7 @@ CREATE TABLE IF NOT EXISTS map_transaction (
     transaction_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM map_transaction;
-
-SELECT * FROM map_transaction LIMIT 10; 
-
-CREATE TABLE IF NOT EXISTS map_insurance (
+CREATE TABLE map_insurance (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -80,13 +64,11 @@ CREATE TABLE IF NOT EXISTS map_insurance (
     insurance_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM map_insurance;
-
-SELECT * FROM map_insurance LIMIT 10;
-
+-- =========================================================
 -- TOP TABLES
+-- =========================================================
 
-CREATE TABLE IF NOT EXISTS top_user (
+CREATE TABLE top_user (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -94,11 +76,7 @@ CREATE TABLE IF NOT EXISTS top_user (
     registered_users BIGINT
 );
 
-SELECT COUNT(*) FROM top_user;
-
-SELECT * FROM top_user LIMIT 10;
-
-CREATE TABLE IF NOT EXISTS top_transaction (
+CREATE TABLE top_map (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -107,11 +85,7 @@ CREATE TABLE IF NOT EXISTS top_transaction (
     transaction_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM top_transaction;
-
-SELECT * FROM top_transaction LIMIT 10;
-
-CREATE TABLE IF NOT EXISTS top_insurance (
+CREATE TABLE top_insurance (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -119,7 +93,3 @@ CREATE TABLE IF NOT EXISTS top_insurance (
     insurance_count BIGINT,
     insurance_amount DOUBLE
 );
-
-SELECT COUNT(*) FROM top_insurance;
-
-SELECT * FROM top_insurance LIMIT 10;

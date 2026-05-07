@@ -3,7 +3,9 @@ import pandas as pd
 import mysql.connector
 import matplotlib.pyplot as plt
 
+# =========================================================
 # PAGE CONFIG
+# =========================================================
 
 st.set_page_config(
     page_title="PhonePe Pulse Dashboard",
@@ -12,7 +14,9 @@ st.set_page_config(
 
 st.title("📊 PhonePe Pulse Data Visualization Dashboard")
 
+# =========================================================
 # MYSQL CONNECTION
+# =========================================================
 
 conn = mysql.connector.connect(
     host="localhost",
@@ -21,7 +25,9 @@ conn = mysql.connector.connect(
     database="phonepe"
 )
 
+# =========================================================
 # SIDEBAR
+# =========================================================
 
 st.sidebar.title("Dashboard Filters")
 
@@ -40,7 +46,9 @@ dataset = st.sidebar.selectbox(
     )
 )
 
+# =========================================================
 # TABLE MAPPING
+# =========================================================
 
 table_mapping = {
     "Aggregated Transaction": "aggregated_transaction",
@@ -56,14 +64,18 @@ table_mapping = {
 
 table_name = table_mapping[dataset]
 
+# =========================================================
 # LOAD DATA
+# =========================================================
 
 df = pd.read_sql(
     f"SELECT * FROM {table_name}",
     conn
 )
 
+# =========================================================
 # FILTERS
+# =========================================================
 
 if "state" in df.columns:
 
@@ -105,7 +117,9 @@ if "transaction_type" in df.columns:
     if transaction != "All":
         df = df[df["transaction_type"] == transaction]
 
+# =========================================================
 # KPI SECTION
+# =========================================================
 
 st.subheader("📌 Key Performance Indicators")
 
@@ -139,7 +153,9 @@ if "insurance_amount" in df.columns:
         f"₹ {df['insurance_amount'].sum():,.0f}"
     )
 
+# =========================================================
 # TOP 10 CHART
+# =========================================================
 
 st.subheader("📊 Top 10 Analysis")
 
@@ -255,7 +271,9 @@ except Exception as e:
 
     st.error(f"Chart Error: {e}")
 
+# =========================================================
 # YEARLY TREND
+# =========================================================
 
 if "year" in df.columns:
 
@@ -300,12 +318,16 @@ if "year" in df.columns:
 
         st.error(f"Trend Chart Error: {e}")
 
+# =========================================================
 # DATAFRAME
+# =========================================================
 
 st.subheader("📂 Dataset Preview")
 
 st.dataframe(df)
 
+# =========================================================
 # CLOSE CONNECTION
+# =========================================================
 
 conn.close()

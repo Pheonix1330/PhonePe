@@ -239,7 +239,7 @@ for state in os.listdir(path):
                         for item in data["data"]["hoverDataList"]:
 
                             query = """
-                            INSERT INTO map_transaction
+                            INSERT INTO map_map
                             VALUES (%s,%s,%s,%s,%s,%s)
                             """
 
@@ -351,7 +351,7 @@ for state in os.listdir(path):
                         pass
 
 
-# 8. TOP TRANSACTION
+# 8. TOP MAP
 
 
 path = base_path + "/top/transaction/country/india/state"
@@ -378,7 +378,7 @@ for state in os.listdir(path):
                         for item in data["data"]["districts"]:
 
                             query = """
-                            INSERT INTO top_transaction
+                            INSERT INTO top_map
                             VALUES (%s,%s,%s,%s,%s,%s)
                             """
 

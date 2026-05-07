@@ -378,7 +378,7 @@ for state in os.listdir(path):
                         for item in data["data"]["districts"]:
 
                             query = """
-                            INSERT INTO top_transaction
+                            INSERT INTO top_map
                             VALUES (%s,%s,%s,%s,%s,%s)
                             """
 

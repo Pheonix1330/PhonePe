@@ -58,7 +58,7 @@ SELECT COUNT(*) FROM map_user;
 
 SELECT * FROM map_user LIMIT 10;
 
-CREATE TABLE IF NOT EXISTS map_transaction (
+CREATE TABLE IF NOT EXISTS map_map (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -67,9 +67,9 @@ CREATE TABLE IF NOT EXISTS map_transaction (
     transaction_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM map_transaction;
+SELECT COUNT(*) FROM map_map;
 
-SELECT * FROM map_transaction LIMIT 10; 
+SELECT * FROM map_map LIMIT 10; 
 
 CREATE TABLE IF NOT EXISTS map_insurance (
     state VARCHAR(100),
@@ -98,7 +98,7 @@ SELECT COUNT(*) FROM top_user;
 
 SELECT * FROM top_user LIMIT 10;
 
-CREATE TABLE IF NOT EXISTS top_transaction (
+CREATE TABLE IF NOT EXISTS top_m (
     state VARCHAR(100),
     year INT,
     quarter INT,
@@ -107,9 +107,9 @@ CREATE TABLE IF NOT EXISTS top_transaction (
     transaction_amount DOUBLE
 );
 
-SELECT COUNT(*) FROM top_transaction;
+SELECT COUNT(*) FROM top_map;
 
-SELECT * FROM top_transaction LIMIT 10;
+SELECT * FROM top_map LIMIT 10;
 
 CREATE TABLE IF NOT EXISTS top_insurance (
     state VARCHAR(100),

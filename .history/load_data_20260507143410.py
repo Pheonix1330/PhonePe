@@ -13,11 +13,11 @@ conn = mysql.connector.connect(
 
 cursor = conn.cursor()
 
-base_path = "pulse-master/data"
+base_path = "base_path = "pulse-master/data""
 
-
+# ==========================================================
 # FUNCTION
-
+# ==========================================================
 
 def execute_query(query, values):
     try:
@@ -25,9 +25,9 @@ def execute_query(query, values):
     except:
         pass
 
-
+# ==========================================================
 # 1. AGGREGATED TRANSACTION
-
+# ==========================================================
 
 path = base_path + "/aggregated/transaction/country/india/state"
 
@@ -71,9 +71,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
+# ==========================================================
 # 2. AGGREGATED USER
-
+# ==========================================================
 
 path = base_path + "/aggregated/user/country/india/state"
 
@@ -117,9 +117,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
+# ==========================================================
 # 3. AGGREGATED INSURANCE
-
+# ==========================================================
 
 path = base_path + "/aggregated/insurance/country/india/state"
 
@@ -165,9 +165,9 @@ if os.path.exists(path):
                         except:
                             pass
 
-
+# ==========================================================
 # 4. MAP USER
-
+# ==========================================================
 
 path = base_path + "/map/user/hover/country/india/state"
 
@@ -211,9 +211,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
-# 5. MAP TRANSACTION
-
+# ==========================================================
+# 5. MAP MAP
+# ==========================================================
 
 path = base_path + "/map/transaction/hover/country/india/state"
 
@@ -239,7 +239,7 @@ for state in os.listdir(path):
                         for item in data["data"]["hoverDataList"]:
 
                             query = """
-                            INSERT INTO map_transaction
+                            INSERT INTO map_map
                             VALUES (%s,%s,%s,%s,%s,%s)
                             """
 
@@ -257,9 +257,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
+# ==========================================================
 # 6. MAP INSURANCE
-
+# ==========================================================
 
 path = base_path + "/map/insurance/hover/country/india/state"
 
@@ -305,9 +305,9 @@ if os.path.exists(path):
                         except:
                             pass
 
-
+# ==========================================================
 # 7. TOP USER
-
+# ==========================================================
 
 path = base_path + "/top/user/country/india/state"
 
@@ -350,9 +350,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
-# 8. TOP TRANSACTION
-
+# ==========================================================
+# 8. TOP MAP
+# ==========================================================
 
 path = base_path + "/top/transaction/country/india/state"
 
@@ -378,7 +378,7 @@ for state in os.listdir(path):
                         for item in data["data"]["districts"]:
 
                             query = """
-                            INSERT INTO top_transaction
+                            INSERT INTO top_map
                             VALUES (%s,%s,%s,%s,%s,%s)
                             """
 
@@ -396,9 +396,9 @@ for state in os.listdir(path):
                     except:
                         pass
 
-
+# ==========================================================
 # 9. TOP INSURANCE
-
+# ==========================================================
 
 path = base_path + "/top/insurance/country/india/state"
 
