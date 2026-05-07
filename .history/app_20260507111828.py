@@ -82,6 +82,7 @@ col3.metric(
 )
 
 # Top States Chart
+# -----------------------------
 
 st.subheader("🏆 Top States by Transaction Amount")
 

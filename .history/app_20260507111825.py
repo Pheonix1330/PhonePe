@@ -81,7 +81,9 @@ col3.metric(
     filtered_df['state'].nunique()
 )
 
+# -----------------------------
 # Top States Chart
+# -----------------------------
 
 st.subheader("🏆 Top States by Transaction Amount")
 

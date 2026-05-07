@@ -81,7 +81,9 @@ col3.metric(
     filtered_df['state'].nunique()
 )
 
+# -----------------------------
 # Top States Chart
+# -----------------------------
 
 st.subheader("🏆 Top States by Transaction Amount")
 
@@ -103,7 +105,9 @@ plt.xticks(rotation=45)
 
 st.pyplot(fig)
 
+# -----------------------------
 # Transaction Type Distribution
+# -----------------------------
 
 st.subheader("💳 Transaction Type Distribution")
 
@@ -122,7 +126,9 @@ type_data.plot(
 
 st.pyplot(fig2)
 
+# -----------------------------
 # Yearly Trend
+# -----------------------------
 
 st.subheader("📈 Yearly Transaction Trend")
 
@@ -140,8 +146,9 @@ year_data.plot(
 
 st.pyplot(fig3)
 
-
+# -----------------------------
 # Raw Data
+
 
 st.subheader("📄 Dataset Preview")
 
