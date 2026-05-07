@@ -62,7 +62,7 @@ if transaction_type != "All":
     ]
 
 # KPIs
-st.subheader(" Key Metrics")
+st.subheader("📌 Key Metrics")
 
 col1, col2, col3 = st.columns(3)
 
@@ -83,7 +83,7 @@ col3.metric(
 
 # Top States Chart
 
-st.subheader(" Top States by Transaction Amount")
+st.subheader("🏆 Top States by Transaction Amount")
 
 top_states = (
     filtered_df.groupby('state')['transaction_amount']
@@ -124,7 +124,7 @@ st.pyplot(fig2)
 
 # Yearly Trend
 
-st.subheader(" Yearly Transaction Trend")
+st.subheader("📈 Yearly Transaction Trend")
 
 year_data = (
     filtered_df.groupby('year')['transaction_amount']
@@ -143,7 +143,7 @@ st.pyplot(fig3)
 
 # Raw Data
 
-st.subheader(" Dataset Preview")
+st.subheader("📄 Dataset Preview")
 
 st.dataframe(filtered_df)
 
