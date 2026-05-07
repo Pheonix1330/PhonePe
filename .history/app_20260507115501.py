@@ -106,7 +106,7 @@ st.pyplot(fig)
 # Transaction Type Distribution
 
 st.subheader("" \
-" Transaction Type Distribution")
+"  Transaction Type Distribution")
 
 type_data = (
     filtered_df.groupby('transaction_type')['transaction_count']
